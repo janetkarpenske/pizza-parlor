@@ -4,7 +4,6 @@ function Order() {
 Order.prototype.addToCart = function(pizza) {
   this.items.push(pizza);
 }
-
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings
@@ -23,10 +22,6 @@ Pizza.prototype.calcPrice = function() {
   }
   pizzaCost += (this.toppings.length * 1)
   return pizzaCost;
-}
-Pizza.prototype.displayPizzaInfo = function() {
-  // $(".result").text("You ordered a " + this.size + " pizza with " + this.toppings + ".");
-  console.log("You ordered a " + this.size + " pizza with " + this.toppings.join(", ") + ".");
 }
 function showShoppingCart(order) {
   $("#myCartItems").empty();
@@ -50,7 +45,6 @@ function calcOrderTotal(order) {
   })
   $("#total").text(total);
 }
-//USER INTERFACE---------------------------------------------------
 let order = new Order();
 $(document).ready(function() {
   $("form#pizzaType").submit(function(event) {
