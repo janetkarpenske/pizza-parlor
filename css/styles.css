@@ -1,8 +1,49 @@
 #mainHeader {
   text-align: center;
+  padding: 20px;
+  border: dotted rgb(82, 165, 4);
+  margin-top: 20px;
+  border-width: 20px;
 }
 #mainHeader h1 {
   font-family: 'Bungee Shade', cursive;
   font-size: 70px;
-  margin-top: 40px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 5px rgb(255, 2, 2);
+}
+#mainHeader h3 {
+  font-family: 'Gravitas One', cursive;
+}
+#myVideo {
+  object-fit: cover;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  margin-top: 70px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 200px;
+  padding: 30px;
+  color: white;
+  border: solid white;
+  border-width: 8px;
+}
+form {
+  margin-top: 30px;
+}
+.btn {
+  background-color: rgb(212, 0, 0);
+}
+
+#viewCartBtn {
+  display: none;
+  padding: 10px;
+  color: rgb(82, 162, 236);
+  border: none;
+  background-color: transparent;
 }

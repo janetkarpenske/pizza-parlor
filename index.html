@@ -5,17 +5,21 @@
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
   <title>Pizza Parlor</title>
 </head>
+<video playsinline autoplay muted loop id="myVideo">
+  <source src="img/production ID_3752509.mp4" type="video/mp4">
+</video>
 <body>
   <div class="container">
   <div id="mainHeader">
     <h1>Papa Pizza's Pizzeria</h1>
-    <h3>Pizza Parlor with Authentic Italian Cuisine</h3>
+    <h3>Pizza Parlor Specializing in Custom Pizzas</h3>
   </div>
 <form id="pizzaType">
   <div class="form-group">
-    <label for="size">Select Size:</label>
+    <label for="size">Select Size: ($Base Price)</label>
     <select class="form-control" id="size">
       <option value="small">Small ($8)</option>
       <option value="medium">Medium ($12)</option>
@@ -24,6 +28,7 @@
   </div>
   <div class="form-group">
     <label for="toppings">Select Toppings: (+$1 each)</label>
+    <br>
     <input type="checkbox" name="toppings" value="cheese"> Mozerella (extra cheesey)<br>
     <input type="checkbox" name="toppings" value="sunTom"> Sundried Tomatoes<br>
     <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni<br>
@@ -34,7 +39,11 @@
     <input type="checkbox" name="toppings" value="tomatoes"> Tomatoes<br>
     <input type="checkbox" name="toppings" value="spinach"> Spinach<br>
   </div>
+  <button type="submit" class="btn">Add to My Order</button>
 </form>
+<div class="viewCart">
+  <button id="viewCartBtn">View My Order</button>
+</div>
 </div>
 </body>
 </html>

@@ -39,6 +39,8 @@ $(document).ready(function() {
   $("form#pizzaType").submit(function(event) {
     event.preventDefault();
 
+    $("#viewCartBtn").show();
+
     const size = $("#size").val();
     let toppings = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
