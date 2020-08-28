@@ -29,8 +29,10 @@ Pizza.prototype.displayPizzaInfo = function() {
   console.log("You ordered a " + this.size + " pizza with " + this.toppings.join(", ") + ".");
 }
 function showShoppingCart(order) {
+  $("#myCartItems").empty();
+  $("#myCart").show();
   order.items.forEach(function(item) {
-    console.log("Size: " + item.size);
+    $("#myCartItems").append("<li> 1 " + item.size + " pizza with " + item.toppings.join(", ") + ".</li>");
   });
 }
 //USER INTERFACE---------------------------------------------------
@@ -38,8 +40,7 @@ let order = new Order();
 $(document).ready(function() {
   $("form#pizzaType").submit(function(event) {
     event.preventDefault();
-
-    $("#viewCartBtn").show();
+    $(".viewCart").show();
 
     const size = $("#size").val();
     let toppings = [];
@@ -49,9 +50,9 @@ $(document).ready(function() {
     });
     let pizza = new Pizza(size, toppings);
     order.addToCart(pizza);
+    $("#confirmItemCount").text(order.items.length);
+  })
+  $("#viewCartBtn").click(function() {
+    showShoppingCart(order);
   })
 })
-
-//BELOW: Used for testing functions--------------------------------  
-  // order.items[1].displayPizzaInfo();
-  // showShoppingCart(order);
