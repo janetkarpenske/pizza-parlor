@@ -17,6 +17,7 @@ https://janetkarpenske.github.io/pizza-parlor/
 | Program accepts input from user and passes it to constructor function which creates an object. | let pizza = new Pizza("small", ["cheese", "pepperoni"]) | pizza = {size: "small", toppings = ["cheese", "pepperoni"]} |
 | Program calculates the cost of the pizza using the inputted info. | pizza = {size: "small", toppings = ["cheese", "pepperoni"]} | 10 |
 | Program displays a summary of pizza and the cost for the user. | this.displayPizzaInfo(); | "You ordered a small pizza with cheese and pepperoni. $10" |
+| Program stores multiple pizzas in an order object. | let pizza2 = new Pizza("medium", ["cheese", "tomatoes"]) | order.items[0] = pizza = {size: "small", toppings: ["cheese", "pepperoni"]} |
 
 ## Tests
 ### Test 1
@@ -31,6 +32,10 @@ Expect(Pizza.prototype.calcPrice(pizza).toEqual(10);
 Describe: Pizza.prototype.displayPizzaInfo() </br>
 Test: "It displays the info of a pizza to the console." </br>
 Expect(Pizza.prototype.displayPizzaInfo(pizza)).toEqual("You ordered a small pizza with cheese and pepperoni. $10.");
+### Test 4
+Describe: Order() </br>
+Test: "It stores info for multiple pizzas." </br>
+Expect(Order.prototype.addToCart(pizza)).toEqual(order = { items = [pizza]});
 
 
 ## Setup/Installation Requirements

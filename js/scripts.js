@@ -1,3 +1,10 @@
+function Order() {
+  this.items = [];
+}
+Order.prototype.addToCart = function(pizza) {
+  this.items.push(pizza);
+}
+
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings
@@ -21,6 +28,7 @@ Pizza.prototype.displayPizzaInfo = function() {
   // $(".result").text("You ordered a " + this.size + " pizza with " + this.toppings + ".");
   console.log("You ordered a " + this.size + " pizza with " + this.toppings.join(", ") + ".");
 }
-
+  let order = new Order();
   let pizza = new Pizza("small", toppings = ["cheese", "pepperoni"]);
-pizza.displayPizzaInfo();
+  order.addToCart(pizza);
+  order.items[0].displayPizzaInfo();
