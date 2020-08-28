@@ -62,3 +62,12 @@ form {
 #pizzaNum {
   text-align: center;
 }
+#checkoutBtn {
+  background-color: rgb(214, 4, 4);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 30px;
+}

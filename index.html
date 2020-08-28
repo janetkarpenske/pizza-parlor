@@ -49,7 +49,19 @@
     <h3>Your Order:</h3>
     <ul id="myCartItems"></ul>
     <h3>Total: $<span id="total"></span></h3>
+    <button id="checkoutBtn">Proceed to Checkout</button>
   </div>
+  <form id="checkoutInfo">
+    <div class="form-group">
+      <label for="cardname">Enter Cardholder Name:</label>
+      <input id="cardname" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label for="address">Enter your address:</label>
+      <input id="address" class="form-control" type="text">
+    </div>
+    <button type="submit" class="checkout-btn">Complete Order</button>
+  </form>
 </div>
 </body>
 </html>
