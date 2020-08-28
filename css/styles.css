@@ -71,3 +71,9 @@ form {
   border-radius: 3px;
   margin-top: 30px;
 }
+#checkout {
+  display: none;
+}
+#checkout-btn {
+  background-color: rgb(209, 4, 4);
+}

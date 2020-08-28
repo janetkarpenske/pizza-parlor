@@ -45,6 +45,10 @@ function calcOrderTotal(order) {
   })
   $("#total").text(total);
 }
+function checkoutPage() {
+  $("#checkoutWipeOut").hide();
+  $("#checkout").show();
+}
 let order = new Order();
 $(document).ready(function() {
   $("form#pizzaType").submit(function(event) {
@@ -65,5 +69,8 @@ $(document).ready(function() {
   $("#viewCartBtn").click(function() {
     showShoppingCart(order);
     calcOrderTotal(order);
+  })
+  $("#checkoutBtn").click(function() {
+    checkoutPage();
   })
 })
