@@ -1,0 +1,8 @@
+#mainHeader {
+  text-align: center;
+}
+#mainHeader h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 70px;
+  margin-top: 40px;
+}
