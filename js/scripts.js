@@ -28,7 +28,18 @@ Pizza.prototype.displayPizzaInfo = function() {
   // $(".result").text("You ordered a " + this.size + " pizza with " + this.toppings + ".");
   console.log("You ordered a " + this.size + " pizza with " + this.toppings.join(", ") + ".");
 }
-  let order = new Order();
+function showShoppingCart(order) {
+  order.items.forEach(function(item) {
+    console.log("Size: " + item.size);
+  });
+}
+//USER INTERFACE---------------------------------------------------
+let order = newOrder();
+
+//BELOW: Used for testing functions--------------------------------
   let pizza = new Pizza("small", toppings = ["cheese", "pepperoni"]);
+  let pizza2 = new Pizza("medium", toppings = ["cheese", "pepperoni"]);
   order.addToCart(pizza);
-  order.items[0].displayPizzaInfo();
+  order.addToCart(pizza2);
+  order.items[1].displayPizzaInfo();
+  showShoppingCart(order);

@@ -18,6 +18,7 @@ https://janetkarpenske.github.io/pizza-parlor/
 | Program calculates the cost of the pizza using the inputted info. | pizza = {size: "small", toppings = ["cheese", "pepperoni"]} | 10 |
 | Program displays a summary of pizza and the cost for the user. | this.displayPizzaInfo(); | "You ordered a small pizza with cheese and pepperoni. $10" |
 | Program stores multiple pizzas in an order object. | let pizza2 = new Pizza("medium", ["cheese", "tomatoes"]) | order.items[0] = pizza = {size: "small", toppings: ["cheese", "pepperoni"]} |
+| Program can display a "shopping cart" that contains all added pizzas. | showShoppingCart(order); | order = {items = [pizza]} |
 
 ## Tests
 ### Test 1
@@ -36,6 +37,10 @@ Expect(Pizza.prototype.displayPizzaInfo(pizza)).toEqual("You ordered a small piz
 Describe: Order() </br>
 Test: "It stores info for multiple pizzas." </br>
 Expect(Order.prototype.addToCart(pizza)).toEqual(order = { items = [pizza]});
+### Test 5
+Describe: showShoppingCart() </br>
+Test: "It displays a list of all the orders." </br>
+Expect(showShoppingCart(order)).toEqual(order = {items = [pizza]});
 
 
 ## Setup/Installation Requirements
