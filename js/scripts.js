@@ -34,12 +34,22 @@ function showShoppingCart(order) {
   });
 }
 //USER INTERFACE---------------------------------------------------
-let order = newOrder();
+let order = new Order();
+$(document).ready(function() {
+  $("form#pizzaType").submit(function(event) {
+    event.preventDefault();
 
-//BELOW: Used for testing functions--------------------------------
-  let pizza = new Pizza("small", toppings = ["cheese", "pepperoni"]);
-  let pizza2 = new Pizza("medium", toppings = ["cheese", "pepperoni"]);
-  order.addToCart(pizza);
-  order.addToCart(pizza2);
-  order.items[1].displayPizzaInfo();
-  showShoppingCart(order);
+    const size = $("#size").val();
+    let toppings = [];
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      const checkedToppings = $(this).val();
+      toppings.push(checkedToppings);
+    });
+    let pizza = new Pizza(size, toppings);
+    order.addToCart(pizza);
+  })
+})
+
+//BELOW: Used for testing functions--------------------------------  
+  // order.items[1].displayPizzaInfo();
+  // showShoppingCart(order);
