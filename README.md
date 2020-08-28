@@ -16,6 +16,7 @@ https://janetkarpenske.github.io/pizza-parlor/
 |-------------|---------------|--------|
 | Program accepts input from user and passes it to constructor function which creates an object. | let pizza = new Pizza("small", ["cheese", "pepperoni"]) | pizza = {size: "small", toppings = ["cheese", "pepperoni"]} |
 | Program calculates the cost of the pizza using the inputted info. | pizza = {size: "small", toppings = ["cheese", "pepperoni"]} | 10 |
+| Program displays a summary of pizza and the cost for the user. | this.displayPizzaInfo(); | "You ordered a small pizza with cheese and pepperoni. $10" |
 
 ## Tests
 ### Test 1
@@ -25,7 +26,11 @@ Expect(Pizza("small", ["cheese", "pepperoni"])).toEqual(pizza = {size: "small", 
 ### Test 2
 Describe: Pizza.prototype.calcPrice() </br>
 Test: "It create a pizza object." </br>
-Expect(Pizza.prototype.calcPrice("small", ["cheese", "pepperoni"])).toEqual(10);
+Expect(Pizza.prototype.calcPrice(pizza).toEqual(10);
+### Test 3
+Describe: Pizza.prototype.displayPizzaInfo() </br>
+Test: "It displays the info of a pizza to the console." </br>
+Expect(Pizza.prototype.displayPizzaInfo(pizza)).toEqual("You ordered a small pizza with cheese and pepperoni. $10.");
 
 
 ## Setup/Installation Requirements

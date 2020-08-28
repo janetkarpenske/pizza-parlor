@@ -17,6 +17,10 @@ Pizza.prototype.calcPrice = function() {
   pizzaCost += (this.toppings.length * 1)
   return pizzaCost;
 }
+Pizza.prototype.displayPizzaInfo = function() {
+  // $(".result").text("You ordered a " + this.size + " pizza with " + this.toppings + ".");
+  console.log("You ordered a " + this.size + " pizza with " + this.toppings.join(", ") + ".");
+}
 
   let pizza = new Pizza("small", toppings = ["cheese", "pepperoni"]);
-console.log(pizza);
+pizza.displayPizzaInfo();
