@@ -29,11 +29,11 @@ Expect(Pizza("small", ["cheese", "pepperoni"])).toEqual(pizza = {size: "small", 
 Describe: Pizza.prototype.calcPrice() </br>
 Test: "It returns a price for a pizza." </br>
 Expect(Pizza.prototype.calcPrice(pizza).toEqual(10);
-### Test 4
+### Test 3
 Describe: Order() </br>
 Test: "It stores info for multiple pizzas." </br>
 Expect(Order.prototype.addToCart(pizza)).toEqual(order = { items = [pizza]});
-### Test 3
+### Test 4
 Describe: Pizza.prototype.displayPizzaInfo() </br>
 Test: "It displays the info of a pizza to the console." </br>
 Expect(Pizza.prototype.displayPizzaInfo(pizza)).toEqual("You ordered a small pizza with cheese and pepperoni. $10.");
